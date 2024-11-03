@@ -39,7 +39,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative max-w-7xl mx-auto">
+    <div className="relative max-w-7xl mx-auto mt-2">
       {/* Main carousel container */}
       <div className="relative h-[300px] overflow-hidden rounded-lg">
         {/* Images */}

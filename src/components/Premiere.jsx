@@ -1,28 +1,20 @@
 import {useState, useEffect} from 'react'
 
-const MovieCard = ({searchInput}) => {
-  console.log(searchInput)
+const Premiere = () => {
   const [movies, setMovies] = useState([])
   const API_KEY = 'fc70bba5'
 
   const movieTitles = [
-    'Inception',
-    'The Dark Knight',
-    'Interstellar',
-    'The Matrix',
-    'Gladiator'
+    'John Wick',
+    'Spider Man',
+    'Big Hero 6',
+    'Stranger Things',
+    'Dark'
   ];
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        if (searchInput) {
-          // Fetch single movie based on search input
-          const response = await fetch(`http://www.omdbapi.com/?t=${searchInput}&apikey=${API_KEY}`);
-          const data = await response.json();
-          setMovies(data.Response === "True" ? [data] : []);
-        } else {
-          // Fetch all movies from the movieTitles array
           const moviePromises = movieTitles.map(title =>
             fetch(`http://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`)
               .then(res => res.json())
@@ -31,14 +23,14 @@ const MovieCard = ({searchInput}) => {
           const fetchedMovies = await Promise.all(moviePromises);
           setMovies(fetchedMovies.filter(movie => movie.Response === "True"));
         }
-      } catch (error) {
+        catch (error) {
         console.error('Error fetching movies:', error);
         setMovies([]);
       }
     };
 
     fetchMovies();
-  }, [searchInput]);
+  }, []);
 
 
   return (
@@ -67,4 +59,4 @@ const MovieCard = ({searchInput}) => {
   )
 }
 
-export default MovieCard
+export default Premiere
