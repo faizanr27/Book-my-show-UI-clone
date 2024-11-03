@@ -18,7 +18,7 @@ const MovieCard = ({searchInput}) => {
       try {
         if (searchInput) {
           // Fetch single movie based on search input
-          const response = await fetch(`http://www.omdbapi.com/?t=${searchInput}&apikey=${API_KEY}`);
+          const response = await fetch(`https://www.omdbapi.com/?t=${searchInput}&apikey=${API_KEY}`);
           const data = await response.json();
           setMovies(data.Response === "True" ? [data] : []);
         } else {
