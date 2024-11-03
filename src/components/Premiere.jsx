@@ -16,7 +16,7 @@ const Premiere = () => {
     const fetchMovies = async () => {
       try {
           const moviePromises = movieTitles.map(title =>
-            fetch(`http://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`)
+            fetch(`https://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`)
               .then(res => res.json())
           );
 
