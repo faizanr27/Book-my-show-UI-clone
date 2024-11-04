@@ -8,9 +8,9 @@ const SectionThree = () => {
   };
 
   return (
-    <div className="flex flex-col mt-20">
+    <div className="flex flex-col mt-20 max-w-7xl mx-auto">
       <h2 className="text-2xl font-bold text-slate-800">The Best Of Live Events</h2>
-      <div className="flex flex-row mt-4 mx-auto">
+      <div className="flex flex-row mt-4 ">
         {Object.values(images).map((image, index) => (
           <img key={index} src={image} alt={`Event ${index + 1}`} className="w-32 sm:w-40 lg:w-48 xl:w-56 rounded-lg  object-cover m-2" />
         ))}

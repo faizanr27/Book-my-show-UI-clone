@@ -41,7 +41,7 @@ const Carousel = () => {
   return (
     <div className="relative max-w-7xl mx-auto mt-2">
       {/* Main carousel container */}
-      <div className="relative h-[300px] overflow-hidden rounded-lg">
+      <div className="relative xl:h-[300px] lg:h-[200px] overflow-hidden rounded-lg">
         {/* Images */}
         <div
           className="flex transition-transform duration-500 ease-out h-full"
