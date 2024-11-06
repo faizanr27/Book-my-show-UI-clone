@@ -21,7 +21,7 @@ const Events = ({searchInput}) => {
         if (searchInput) {
           // Fetch multiple movie based on search input
           setMovies([]);
-          const response = await fetch(`http://www.omdbapi.com/?s=${searchInput.trim()}&page=1&apikey=${API_KEY}`);
+          const response = await fetch(`https://www.omdbapi.com/?s=${searchInput.trim()}&page=1&apikey=${API_KEY}`);
           const data = await response.json();
           console.log(data)
           if (!(data.Response === "True")) {
@@ -35,7 +35,7 @@ const Events = ({searchInput}) => {
         } else {
           // Fetch all movies from the movieTitles array
           const moviePromises = movieTitles.map(title =>
-            fetch(`http://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`)
+            fetch(`https://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`)
               .then(res => res.json())
           );
 

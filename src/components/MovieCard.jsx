@@ -33,7 +33,7 @@ const MovieCard = ({searchInput}) => {
         } else {
           // Fetch all movies from the movieTitles array
           const moviePromises = movieTitles.map(title =>
-            fetch(`http://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`)
+            fetch(`https://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`)
               .then(res => res.json())
           );
 
