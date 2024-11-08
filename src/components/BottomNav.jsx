@@ -18,8 +18,10 @@ function BottomNavBar() {
         </Link>
         </div>
         <div className="flex flex-col items-center">
+          <Link to="/events">
           <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/le-icon-grey-collection-202405100122.png" alt="Live Events" className="object-cover w-8 h-8" />
           <span className="text-gray-500 text-xs">Live Events</span>
+          </Link>
         </div>
         <div className="flex flex-col items-center">
           <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/profile-default-collection-202302270255.png" alt="Profile" className="object-cover w-8 h-8" />
