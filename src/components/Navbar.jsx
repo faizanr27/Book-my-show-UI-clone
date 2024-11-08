@@ -51,7 +51,7 @@ const Navbar = ({addSearch}) => {
       <div className="max-w-7xl flex flex-row justify-between mx-auto" dir="ltr">
       <div className="flex flex-row gap-4 mx-auto scroll-ps-6 snap-x">
 
-            <a href="#"><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:w-300/icd-movies-collection-202201201113.png" className="w-20 h-20 xs:w-24 xs:h-24"/></a>
+            <Link to="/movies"><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:w-300/icd-movies-collection-202201201113.png" className="w-20 h-20 xs:w-24 xs:h-24"/></Link>
             <a href="#"><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:w-300/hsbc-top-nav-icon-collection-202408011243.png" className="w-20 h-20 xs:w-20 xs:h-20"/></a>
             <a href="#"><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:w-300/icd-sports-collection-202201201113.png" className="w-20 h-20 xs:w-20 xs:h-20"/></a>
             <a href="#"><img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:w-300/icd-music-shows-collection-202201201113.png" className=" w-20 h-20 xs:w-20 xs:h-20"/></a>
